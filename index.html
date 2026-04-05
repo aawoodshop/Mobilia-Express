@@ -358,14 +358,17 @@ document.addEventListener('DOMContentLoaded', function() {
         inputEl.value = '';
         messagesEl.scrollTop = messagesEl.scrollHeight;
 
-        // Bot reply
+        // Trigger SMS
         setTimeout(() => {
             const botMsg = document.createElement('div');
             botMsg.className = 'chatbot-message bot';
-            botMsg.textContent = "Thanks for reaching out! A representative will connect with you shortly. If you need immediate assistance, please call +1 9542341937.";
+            botMsg.textContent = "Connecting you to our team via text message...";
             messagesEl.appendChild(botMsg);
             messagesEl.scrollTop = messagesEl.scrollHeight;
-        }, 800);
+            
+            // Open SMS application
+            window.location.href = "sms:+19542341937?body=" + encodeURIComponent(text);
+        }, 500);
     }
 
     sendBtn.addEventListener('click', sendMessage);
