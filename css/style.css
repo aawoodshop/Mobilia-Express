@@ -703,3 +703,50 @@ ul {
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .main-nav { display: none; } /* Mobile menu needed for real prod */
 }
+
+/* Project Form Styles */
+.project-form {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  background: var(--c-white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--c-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--c-gray-200);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--c-orange);
+}
+
+input[type="file"].form-control {
+  padding: 0.75rem;
+  background: var(--c-white);
+}
+
+.project-form .btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+}
